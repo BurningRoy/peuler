@@ -10,10 +10,9 @@ dividend = 600851475143
 #dividend = 7
 
 while divisor < dividend:
-    remainder = dividend % divisor
-    if remainder == 0:
+    if dividend % divisor == 0:
         dividend = dividend / divisor
-        #divisor = 2
+        divisor = 2
     else:
         divisor += 1
 else:
