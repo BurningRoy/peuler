@@ -25,5 +25,5 @@ if __name__ == '__main__':
             primes.append(start)
         start += 2
     else:
-        print "Final result: ", start - 2
+        print "Final result: ", primes[-1]
     print time.time() - start_time
