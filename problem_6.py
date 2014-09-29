@@ -18,7 +18,7 @@ import time
 
 def sum_square_difference(ops_list): # ops_list is a list of operands
     result = 0
-    while len(ops_list) >= 1:
+    while len(ops_list) > 1:
         first_operand = ops_list[0]
         ops_list = ops_list[1::1]
         for i in ops_list:
