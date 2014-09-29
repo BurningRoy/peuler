@@ -4,32 +4,26 @@ we can see that the 6th prime is 13.
 
 What is the 10 001st prime number?
 """
-# Brute force solution
 
 import time
 
-def is_prime(num):
-    divisor = 2
-    while divisor < num:
-        if num % divisor == 0:
+def is_prime(num, prim_list):
+    #divisor = 2
+    for item in prim_list:
+        if num % item == 0:
             return False
-        else:
-            divisor += 1
-    else:
-        return True
+    return True
 
 if __name__ == '__main__':
     start_time = time.time()
     rounds = 10000
     start = 3
+    primes = [2]
     while rounds > 0:
-        if is_prime(start):
-            #start += 1
-            #print "Got: ", rounds, "Number: ", start
+        if is_prime(start, primes):
             rounds -= 1
+            primes.append(start)
         start += 2
-        #time.sleep(1)
     else:
         print "Final result: ", start - 2
     print time.time() - start_time
-        
