@@ -10,6 +10,8 @@ import time
 def is_prime(num, prim_list):
     #divisor = 2
     for item in prim_list:
+        if item ** 2 > num:
+            break
         if num % item == 0:
             return False
     return True
@@ -23,6 +25,7 @@ if __name__ == '__main__':
         if is_prime(start, primes):
             rounds -= 1
             primes.append(start)
+            #print "Got: ", rounds, "Number: ", start
         start += 2
     else:
         print "Final result: ", primes[-1]
